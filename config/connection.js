@@ -9,13 +9,13 @@ const mysql = require('mysql');
 if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-const local = {
+connection = mysql.createConnection({
   host: 'localhost',
   port: process.env.PORT || 3306,
   user: process.env.MYSQL_USER,        // in .env file
   password: process.env.MYSQL_PASSWD,  // in .env file
   database: 'burgers_db'
-};
+});
 }
 
 // Attempt to connecto to the database
