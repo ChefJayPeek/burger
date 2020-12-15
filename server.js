@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 // Set static directory reference path
-app.use(express.static(path.join(__dirname, 'public'))); 
+app.use(express.static(path.join('public'))); 
 
 // Handlebars middleware
 app.engine('handlebars', exphbs({defaultLayout: 'main'}));
